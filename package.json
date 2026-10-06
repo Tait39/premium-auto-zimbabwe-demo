@@ -17,5 +17,8 @@
   },
   "engines": {
     "node": "22.x"
-  }
+  },
+  "name": "premium-auto-zimbabwe-demo",
+  "version": "1.0.0",
+  "private": true
 }
