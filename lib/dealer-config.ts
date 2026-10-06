@@ -7,7 +7,7 @@ export const dealerConfig = {
   enquiryMessage: "Hi, I'm interested in this vehicle. Is it still available?",
 } as const;
 
-export function buildWhatsAppUrl(message = dealerConfig.enquiryMessage) {
+export function buildWhatsAppUrl(message: string = dealerConfig.enquiryMessage) {
   if (!dealerConfig.whatsappNumber) return "#contact";
   return "https://wa.me/" + dealerConfig.whatsappNumber + "?text=" + encodeURIComponent(message);
 }
