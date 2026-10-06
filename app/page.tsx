@@ -99,7 +99,7 @@ export default function Home() {
       <div className="grid">{visibleCars.map(c=><button className="car" key={c.name} onClick={() => setSelected(c)} aria-label={`View ${c.name}`}>
         <div className="carImg" style={{backgroundImage:`url('${c.img}')`}}/><div className="carBody"><div className="carTop"><h3>{c.name}</h3><div className="price">{c.price}</div></div><div className="spec"><span>{c.year}</span><span>{c.km}</span><span>{c.fuel}</span></div><span className="view">View vehicle →</span></div>
       </button>)}</div>
-    </div></section>
+    </div>{visibleCars.length === 0 && <div className="emptyState">No vehicles match those criteria. Adjust the filters or <button type="button" onClick={() => {setFilter("All Vehicles");setBudget("Any budget");setBodyType("Any body type");setMake("Any make");}}>reset your search</button>.</div>}</section>
 
     <section className="manifesto" id="experience"><div className="container"><div className="kicker">The experience</div><h2>Luxury should feel effortless.</h2><p>From the first image to the first conversation, every touchpoint is designed around clarity, confidence and a faster path to the right vehicle.</p><div className="featureGrid">
       <a className="feature" href="#stock"><small>01 / SEARCH</small><strong>Find your next car without the noise.</strong></a>
